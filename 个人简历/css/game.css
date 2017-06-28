@@ -1,0 +1,88 @@
+.rotateMusic{
+    animation: xuzuan 1.5s linear infinite;
+}
+@keyframes xuzuan {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+.xzuan{
+    animation: zuan 1.5s linear ;
+}
+@keyframes zuan {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(720deg)}
+}
+
+
+.xialuo{
+    animation: xialuo 1.5s linear forwards;
+}
+@keyframes xialuo {
+    0%{transform:translateY(-5rem)}
+    20%{transform:translateY(-1rem)}
+    50%{transform:translateY(1rem)}
+    100%{transform:translateY(0rem)}
+}
+
+.paohui{
+    animation: paohui 1.5s linear forwards;
+}
+@keyframes paohui {
+    0%{transform:translateX(-10rem)}
+    100%{transform:translateX(0rem)}
+
+}
+.pz{
+    animation: paozuan 1.5s linear forwards;
+}
+@keyframes paozuan {
+    0%{transform:translateX(-10rem)transform: rotate(360deg)}
+    100%{transform:translateX(0rem)transform: rotate(0deg)}
+
+}
+.lahui{
+    animation: lahui 1.5s linear forwards;
+}
+@keyframes lahui {
+    0%{transform:translateX(10rem)}
+    100%{transform:translateX(0rem)}
+}
+
+.xialuo{
+    animation: xialuo 1.5s linear forwards;
+}
+@keyframes xialuo {
+    0%{transform:translateY(5rem)}
+    20%{transform:translateY(1rem)}
+    50%{transform:translateY(-1rem)}
+    100%{transform:translateY(0rem)}
+}
+.xia{
+     animation: xia 1.5s linear forwards;
+ }
+@keyframes xia {
+    50%{transform:translateY(-10rem)}
+    100%{transform:translateY(0rem)}
+}
+.shang{
+    animation: shang 1.5s linear forwards;
+}
+@keyframes shang {
+    50%{transform:translateY(10rem)}
+    100%{transform:translateY(0rem)}
+}
+.sf{
+    animation: suofang 1.5s linear forwards;
+}
+@keyframes suofang {
+    0%{transform: scale(0)}
+    100%{transform: scale(1)}
+}
+.kua{
+    animation: jinru 1.5s linear;
+}
+@keyframes jinru {
+    0%{  transform:translateX(10rem)
+        transform:translateY(-10rem)}
+    100%{transform:translateX(0rem) transform:translateY(0rem) transform: rotate(720deg)}
+}

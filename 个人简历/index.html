@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/game.css"/>
+    <script src="js/fontsize.js"></script>
+</head>
+<body>
+<span class="music rotateMusic"></span>
+<audio src="source/林俊杰%20-%20不死之身%20%5Bmqms2%5D.mp3" id="audio" autoplay></audio>
+<!--第一页-->
+<div class="page page1">
+    <div class="fang">
+        <h2 class="hz1 xialuo">你不知道的我！</h2>
+        <h2 class="hz2 paohui">________________________________________________________</h2>
+    </div>
+    <div class="touxiang lahui">
+        <img src="img/grjl.png" alt=""/>
+    </div>
+</div>
+<!--第二页-->
+<div class="page page2 pageDown">
+    <div class="hide">
+        <img class="tu1 paohui" src="img/ge1.png" alt=""/>
+        <img class="tu2 xialuo" src="img/ge2.png" alt=""/>
+        <img class="tu3 lahui" src="img/ge3.png" alt=""/>
+        <img class="tu4 paoqu" src="img/ge4.png" alt=""/>
+        <img class="tu5 lahui" src="img/tu5.jpeg" alt=""/>
+    </div>
+</div>
+<div class="page page3 pageDown">
+    <div class="hide">
+        <img class="ptu31" src="img/toux.jpg" alt=""/>
+        <img class="ptu32" src="img/xian2.png" alt=""/>
+    </div>
+    <div class="pp3 hide">
+        <div class="pazi3 paohui">姓名：王慧杰</div>
+        <div class="pazi3 lahui">性别：男</div>
+        <div class="pazi3 paohui">出生日期：1997.01.12</div>
+        <div class="pazi3 lahui">籍贯：河北张家口</div>
+        <div class="pazi3 paohui">专业：计算机Web前段</div>
+        <div class="pazi3 lahui">来自：盛邦升华 </div>
+    </div>
+    <div class="kuai1 xzuan hide"></div>
+    <div class="kuai2 xzuan hide"></div>
+    <div class="kuai3 xzuan hide"></div>
+</div>
+<div class="page page4 pageDown">
+    <div class="hide">
+        <img class="paohui" src="img/ge5.5.png" alt=""/>
+    </div>
+    <div class="pazi1 yuan1 sf lahui">目前掌握的技能:</div>
+    <div class="pazi2 yuan2 sf hide">swiper</div>
+    <div class="pazi2 yuan3 sf hide">html</div>
+    <div class="pazi2 yuan4 sf hide">css3</div>
+    <div class="pazi2 yuan5 sf hide">jquery</div>
+    <div class="yuan6 sf hide"></div>
+    <div class="yuan7 sf hide"></div>
+</div>
+<div class="page page5 pageDown">
+    <div class="work hide">-WORK  SHOW-</div>
+    <div class="hide">
+        <img class="zs1 xzuan" src="img/zpzs.png" alt=""/>
+        <img class="zs2 paohui"src="img/zpzs1.png" alt=""/>
+        <img class="zs3 paohui"src="img/zpzs2.jpg" alt=""/>
+        <img class="zs4 lahui"src="img/zpzs3.png" alt=""/>
+        <img class="zs5 lahui"src="img/zpzs4.png" alt=""/>
+        <img class="zs6" src="img/bottom.jpg" alt=""/>
+    </div>
+</div>
+<div class="page page6 pageDown">
+    <div class="fang hide">
+        <img class="lx lahui" src="img/lx.png" alt=""/>
+        <img class="fs paohui" src="img/fs.png" alt=""/>
+        <img class="erwei xialuo" src="img/二维码.jpg" alt=""/>
+    </div>
+    <div class="pazi4 paohui hide">电话：13011972752</div>
+    <div class="pazi4 paohui hide">QQ：2806271270 </div>
+</div>
+</body>
+</html>
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script>
+    $(".music").tap(function(){
+        $(this).toggleClass("rotateMusic")
+//        判断声音是否是暂停的
+        if($("#audio").get(0).paused){
+//            是  就播放
+            $("#audio").get(0).play();
+        }
+//        否则就暂停
+        else{
+            $("#audio").get(0).pause();
+        }
+    })
+    //    多屏滚动
+    var i=0 //当前页码
+    //    获取总的页数
+    var pageCount=$(".page").length-1
+    $("body").swipeUp(
+            function(){
+                if(i<pageCount){
+                    $(".page").eq(i).addClass("pageUp");
+                    $(".page").eq(i).children().addClass("hide")
+                    i++;
+                    $(".page").eq(i).removeClass("pageDown");
+                    $(".page").eq(i).children().removeClass("hide")
+                }
+            }
+    )
+    $("body").swipeDown(
+            function(){
+                if(i>0){
+                    $(".page").eq(i).addClass("pageDown");
+                    $(".page").eq(i).children().addClass("hide")
+                    i--;
+                    $(".page").eq(i).removeClass("pageUp");
+                    $(".page").eq(i).children().removeClass("hide")
+                }
+            })
+</script>

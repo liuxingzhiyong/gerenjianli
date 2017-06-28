@@ -1,0 +1,156 @@
+/*//星星*/
+.animate{
+    animation: 2s linear;
+}
+.animate1{
+    animation: 3s linear;
+}
+.infinite{
+    animation-iteration-count: infinite;
+}
+.tu1{
+    animation: tu1 2s linear infinite ;
+}
+.tu2{
+    animation: tu1 2s linear 0.5s infinite ;
+}
+@keyframes tu1 {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+/*中秋文字*/
+.png1{
+    animation: png1 2s linear;
+}
+@keyframes png1 {
+    0%{transform: scale(0.5);opacity: 0}
+    50%{transform: scale(1.1)}
+    100%{opacity: 1}
+}
+.png2{
+    animation: png2 1.5s linear;
+}
+@keyframes png2 {
+    0%{transform: translateX(-300px);}
+    100%{transform: translateX(0);}
+}
+
+/*云*/
+.yun{
+    animation: yun 4.5s linear infinite;
+    /*animation-name: yun;*/
+}
+.yun1{
+    animation: yun 5.2s linear infinite;
+}
+@keyframes yun {
+    0%{transform: translateX(-200px)}
+    100%{transform: translateX(200px)}
+}
+
+
+/*透明度*/
+.touming{
+    animation-name: touming;
+}
+.touming1{
+    animation-name: touming;
+    animation-delay: 0.5s;
+}
+@keyframes touming {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+/*移动*/
+.ydleft{
+    animation: left 2s linear;
+}
+.ydleft1{
+    animation: left 2.5s linear;
+}
+.ydleft2{
+    animation: left 3s linear;
+}
+.ydleft3{
+    animation: left 3.5s linear;
+}
+.ydleft4{
+    animation: left 4s linear;
+}
+.ydleft5{
+    animation: left 4.5s linear;
+}
+@keyframes left {
+    0%{transform: translateX(-280rem)}
+    100%{transform: translateX(0)}
+}
+
+.yd{
+    animation: left1 2s linear;
+}
+.ydtop{
+    animation: top 2s linear;
+}
+@keyframes left1 {
+    0%{transform: translateX(-800px)}
+    100%{transform: translateX(0)}
+}
+@keyframes top {
+    0%{transform: translateY(-500px)}
+    100%{transform: translateY(0)}
+}
+
+
+/*旋转*/
+.xz{
+    animation-name: xuanzhuan;
+}
+@keyframes xuanzhuan{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+.xz1{
+    animation-name: xuanzhuan1;
+}
+@keyframes xuanzhuan1{
+    0%{transform: rotateY(0deg)}
+    100%{transform: rotateY(360deg)}
+}
+
+/*缩放*/
+.suofang{
+    animation-name: suofang;
+}
+@keyframes suofang {
+    0%{transform: scale(0)}
+    100%{transform: scale(1)}
+}
+.text{
+    animation-name: text;
+    transform-origin: left top;
+}
+@keyframes text {
+    0%{transform: scale(0)}
+    100%{transform: scale(1)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
